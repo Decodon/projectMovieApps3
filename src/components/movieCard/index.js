@@ -33,20 +33,20 @@ export default function MovieCard(props) {
   return (
     <Card className={classes.card}>
       <CardHeader
-      className={classes.header}
-      avatar={
-        movie.favourite ? (
-          <Avatar className={classes.avatar}>
-            <FavoriteIcon />
-          </Avatar>
-        ) : null
-      }
-      title={
-        <Typography variant="h5" component="p">
-          {movie.title}{" "}
-        </Typography>
-      }
-    />
+        className={classes.header}
+        avatar={
+          movie.favourite ? (
+            <Avatar className={classes.avatar}>
+              <FavoriteIcon />
+            </Avatar>
+          ) : null
+        }
+        title={
+          <Typography variant="h5" component="p">
+            {movie.title}{" "}
+          </Typography>
+        }
+      />
       <CardMedia
         className={classes.media}
         image={
