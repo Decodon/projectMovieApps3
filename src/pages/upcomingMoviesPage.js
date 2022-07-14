@@ -6,7 +6,7 @@ import { getUpcomingMovies } from '../api/tmdb-api'
 import AddToUpcomingMoviesIcon from "../components/cardIcons/addToUpcomingMovies";
 
 const UpcomingMoviesPage = (props) => {
-  const {  data, error, isLoading, isError }  = useQuery('discover', getUpcomingMovies)
+  const {  data, error, isLoading, isError }  = useQuery('discoverUpcoming', getUpcomingMovies)
 
   if (isLoading) {
     return <Spinner />
