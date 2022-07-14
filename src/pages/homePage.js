@@ -7,7 +7,7 @@ import MovieList from "../components/movieList";
 import Fab from "@material-ui/core/Fab";
 import Drawer from "@material-ui/core/Drawer";
 
-const useStyles = makeStyles((theme) =>  ({
+const useStyles = makeStyles((theme) => ({
   root: {
     padding: "20px",
   },
@@ -27,6 +27,13 @@ const MovieListPage = (props) => {
   const [drawerOpen, setDrawerOpen] = useState(false);
 
   const genreId = Number(genreFilter);
+
+  const addToFavourites = (movieId) => {
+    const updatedMovies = movies.map((m) =>
+      m.id === movieId ? { ...m, favourite: true } : m
+    );
+    setMovies(updatedMovies);
+  };
 
   let displayedMovies = movies
     .filter((m) => {
@@ -58,15 +65,18 @@ const MovieListPage = (props) => {
 
   return (
     <>
-    <Grid container className={classes.root}>
-      <Grid item xs={12}>
-        <Header title={"Home Page"} />
+      <Grid container className={classes.root}>
+        <Grid item xs={12}>
+          <Header title={"Home Page"} />
+        </Grid>
+        <Grid item container spacing={5}>
+          <MovieList
+            movies={displayedMovies}
+            selectFavourite={addToFavourites}
+          />
+        </Grid>
       </Grid>
-      <Grid item container spacing={5}>
-        <MovieList movies={displayedMovies}></MovieList>
-      </Grid>
-    </Grid>
-    <Fab
+      <Fab
         color="secondary"
         variant="extended"
         onClick={() => setDrawerOpen(true)}
