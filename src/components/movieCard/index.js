@@ -15,6 +15,7 @@ import { Link } from "react-router-dom";
 import Avatar from "@material-ui/core/Avatar";
 import { MoviesContext } from "../../contexts/moviesContext";
 
+
 const useStyles = makeStyles({
   card: { maxWidth: 345 },
   media: { height: 500 },
