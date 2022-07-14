@@ -7,12 +7,7 @@ const UpcomingMoviesPage = (props) => {
   const favourites = movies.filter((m) => m.favourite);
   localStorage.setItem("favourites", JSON.stringify(favourites));
 
-  const addToFavourites = (movieId) => {
-    const updatedMovies = movies.map((m) =>
-      m.id === movieId ? { ...m, favourite: true } : m
-    );
-    setMovies(updatedMovies);
-  };
+  const addToFavourites = () => null;
 
   useEffect(() => {
     getUpcomingMovies().then((movies) => {
