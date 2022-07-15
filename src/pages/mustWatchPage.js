@@ -7,11 +7,11 @@ import Spinner from "../components/spinner";
 import RemoveFromFavourites from "../components/cardIcons/removeFromFavourites";
 import WriteReview from "../components/cardIcons/writeReview";
 
-const FavouriteMoviesPage2 = () => {
+const MustWatchPage = () => {
   const { favourites: movieIds } = useContext(MoviesContext);
 
   // Create an array of queries and run in parallel.
-  const favouriteMovieQueries = useQueries(
+  const mustWatchMovieQueries = useQueries(
     movieIds.map((movieId) => {
       return {
         queryKey: ["movie", { id: movieId }],
@@ -20,13 +20,13 @@ const FavouriteMoviesPage2 = () => {
     })
   );
   // Check if any of the parallel queries is still loading.
-  const isLoading = favouriteMovieQueries.find((m) => m.isLoading === true);
+  const isLoading = mustWatchMovieQueries.find((m) => m.isLoading === true);
 
   if (isLoading) {
     return <Spinner />;
   }
 
-  const movies = favouriteMovieQueries.map((q) => {
+  const movies = mustWatchMovieQueries.map((q) => {
     q.data.genre_ids = q.data.genres.map((g) => g.id);
     return q.data;
   });
@@ -47,4 +47,4 @@ const FavouriteMoviesPage2 = () => {
   );
 };
 
-export default FavouriteMoviesPage2;
+export default MustWatchPage;

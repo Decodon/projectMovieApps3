@@ -4,18 +4,19 @@ import IconButton from "@material-ui/core/IconButton";
 import PlaylistAddIcon from "@material-ui/icons/PlaylistAdd";
 
 
-const AddToUpcomingMoviesIcon = ({ movie }) => {
+const AddToMustWatch = ({ movie }) => {
   const context = useContext(MoviesContext);
 
-  const handleAddToUpcomingMoviesIcon = (e) => {
+  const handleAddToMustWatch = (e) => {
     e.preventDefault();
-    context.addToUpcomingMoviesIcon(movie);
+    context.addToMustWatch(movie);
+    console.log(movie);
   };
   return (
-    <IconButton aria-label="add to favorites" onClick={handleAddToUpcomingMoviesIcon}>
+    <IconButton aria-label="add to must match" onClick={handleAddToMustWatch}>
       <PlaylistAddIcon color="primary" fontSize="large" />
     </IconButton>
   );
 };
 
-export default AddToUpcomingMoviesIcon;
+export default AddToMustWatch;

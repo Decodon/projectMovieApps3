@@ -3,7 +3,7 @@ import PageTemplate from "../components/templateMovieListPage";
 import { useQuery } from 'react-query'
 import Spinner from '../components/spinner'
 import { getUpcomingMovies } from '../api/tmdb-api'
-import AddToUpcomingMoviesIcon from "../components/cardIcons/addToUpcomingMovies";
+import AddToMustWatch from "../components/cardIcons/addToMustWatch";
 
 const UpcomingMoviesPage = (props) => {
   const {  data, error, isLoading, isError }  = useQuery('discoverUpcoming', getUpcomingMovies)
@@ -17,14 +17,12 @@ const UpcomingMoviesPage = (props) => {
   }  
   const movies = data.results;
 
-  const addToFavourites = () => null;
-
   return (
     <PageTemplate
       title="Discover Upcoming Movies"
       movies={movies}
       action={(movie) => {
-        return <AddToUpcomingMoviesIcon movie={movie} />
+        return <AddToMustWatch movie={movie} />;
       }}
     />    
   );
