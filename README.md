@@ -45,43 +45,39 @@ https://github.com/Decodon/projectMovieApps3.git
 [d1]: ./public/similarMovies.JPG
 [d2]: ./public/tvShows.JPG
 [d3]: ./public/tvDetails.JPG
-[d4]: ./public/tvRatings.JPG
-[d5]: ./public/popularActors.JPG
-[d6]: ./public/actorDetails.JPG
-[d7]: ./public/login.JPG
-[d8]: ./public/topRated.JPG
+[d4]: ./public/popularActors.JPG
+[d5]: ./public/actorDetails.JPG
+[d6]: ./public/login.JPG
+[d7]: ./public/topRated.JPG
 
 + Similar Movies - This returns a list of top rated movies using an API call based on a selected movie. They can then be added to favourites also
 
 ![][d1]
 
-+ Top Rated Movies - This returns a list of top rated movies using an API call and can filter based on Genre
++ TV Shows - This returns a list of TVs shows that you can filter by genre
 
 ![][d2]
 
-+ Top Rated Movies - This returns a list of top rated movies using an API call and can filter based on Genre
++ TV Show details - This returns some details on the show selected
 
 ![][d3]
 
-+ Tv - This returns a list of top rated movies using an API call and can filter based on Genre
++ Actors - This returns a list of popular actors
 
 ![][d4]
 
-+ Actors - This returns a list of popular actors
++ Actor Details - This brings up the actors biography
 
 ![][d5]
 
-+ Actor Details - This brings up the actors biography
++ Login - A page to login so you can see protected links
 
 ![][d6]
 
-+ Login - A page to login so you can see protected links
++ Top Rated Movies - This returns a list of top rated movies using an API call and can filter based on Genrenks
 
 ![][d7]
 
-+ Top Rated Movies - This returns a list of top rated movies using an API call and can filter based on Genre
-
-![][d8]
 
 
 
@@ -129,11 +125,10 @@ platform your app uses (e.g. TMDB lists, Firestore) and itemize the data it pers
 [d1]: ./public/similarMovies.JPG
 [d2]: ./public/tvShows.JPG
 [d3]: ./public/tvDetails.JPG
-[d4]: ./public/tvRatings.JPG
-[d5]: ./public/popularActors.JPG
-[d6]: ./public/actorDetails.JPG
-[d7]: ./public/login.JPG
-[d8]: ./public/topRated.JPG
+[d4]: ./public/popularActors.JPG
+[d5]: ./public/actorDetails.JPG
+[d6]: ./public/login.JPG
+[d7]: ./public/topRated.JPG
 [detail]: ./public/detail.png
 [caching]: ./public/caching.png
 [stories]: ./public/stories.png
