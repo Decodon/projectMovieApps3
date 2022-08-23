@@ -18,6 +18,9 @@ import TvsContextProvider from "./contexts/tvsContext";
 import TvsPage from "./pages/tvsPage";
 import TvPage from "./pages/tvDetailsPage";
 import SimilarMoviesPage from "./pages/similarMoviesPage";
+import TopRatedMoviesPage from "./pages/topRatedMoviesPage";
+import ActorsPage from "./pages/actorsPage";
+import ActorDetailsPage from "./pages/actorDetailsPage";
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -44,11 +47,14 @@ const App = () => {
               element={<FavouriteMoviesPage />}
             />
             <Route path="/movies/mustWatch" element={<MustWatchPage />} />
+            <Route path="/movies/topRated" element={<TopRatedMoviesPage />} />
             <Route path="/reviews/:id" element={<MovieReviewPage />} />
             <Route path="/movies/:id" element={<MoviePage />} />
             <Route path="/tvs" element={<TvsPage />} />
             <Route path="/tvs/:id" element={<TvPage />} />
             <Route path="/movies/:id/similar" element={<SimilarMoviesPage/>} />
+            <Route path="/actors" element={<ActorsPage />} />
+            <Route path="/actors/:id" element={<ActorDetailsPage />} />
             <Route path="/" element={<HomePage />} />
             <Route path="*" element={<Navigate to="/" replace />} />
           </Routes>

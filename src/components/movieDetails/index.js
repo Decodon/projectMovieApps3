@@ -85,6 +85,20 @@ const MovieDetails = ({ movie }) => {
           />
           <Chip label={`Released: ${movie.release_date}`} />
         </Paper>
+        <Paper component="ul" className={classes.chipSet}>
+          <li>
+            <Chip
+              label="Genres"
+              className={classes.chipLabel}
+              color="primary"
+            />
+          </li>
+          {movie.genres.map((g) => (
+            <li key={g.name}>
+              <Chip label={g.name} className={classes.chip} />
+            </li>
+          ))}
+        </Paper>
         <Link to={`/movies/${movie.id}/similar`}>
           <Button variant="outlined" size="medium" color="primary">
             Similiar Movies
