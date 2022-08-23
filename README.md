@@ -22,36 +22,67 @@ https://github.com/Decodon/projectMovieApps3.git
 
 ![][cD]
 
-Use npm install to install any modules/libraries needed
++ Use "npm install" to install any modules/libraries needed
 
-use nmp start to run the project
++ Use "nmp start" to run the project
+
++ Use "npm run storybook" to run storybook
 
 ## App Design.
 
 ### Routing/Navigation.
 
-[List the set of routes your app supports - only mention new instances if you expanded the Movies Fan app. State the view linked with each route.] 
++ /login - Allows protected pages to be seen.
++ /movies/mustWatch - Not implemented, was for adding to a list from Upcoming Movies 
++ /tvs - A list of TV shows currently popular
++ /tvs/:id - Details on a particular TV Show
++ /movies/:id/similar - To show a list of similar movies based on the movie selected
++ /actors - A list of currently popular actors
++ /actors/:id - A biography of a given actor
 
-e.g.
-+ /movies/:id - detailed information on a specific movie.
-+ /movies/upcoming - lists movies soon to be shown in cinemas.
-+ etc.
-+ etc.
 
 ### Views/Pages.
+[d1]: ./public/similarMovies.JPG
+[d2]: ./public/tvShows.JPG
+[d3]: ./public/tvDetails.JPG
+[d4]: ./public/tvRatings.JPG
+[d5]: ./public/popularActors.JPG
+[d6]: ./public/actorDetails.JPG
+[d7]: ./public/login.JPG
+[d8]: ./public/topRated.JPG
 
-[ For each view in your app, show a screenshot and caption - only new/modified ones in the case of the Movies Fan app. If necessary, use multiple screenshots to cover a view's full capability.
-
-e.g.
->Lists movies from the Discover endpoint. Filtering on title and genre attributes is supported.
++ Similar Movies - This returns a list of top rated movies using an API call based on a selected movie. They can then be added to favourites also
 
 ![][d1]
 
++ Top Rated Movies - This returns a list of top rated movies using an API call and can filter based on Genre
+
 ![][d2]
 
->Shows detailed information on a specific movie
++ Top Rated Movies - This returns a list of top rated movies using an API call and can filter based on Genre
 
-![][detail]
+![][d3]
+
++ Tv - This returns a list of top rated movies using an API call and can filter based on Genre
+
+![][d4]
+
++ Actors - This returns a list of popular actors
+
+![][d5]
+
++ Actor Details - This brings up the actors biography
+
+![][d6]
+
++ Login - A page to login so you can see protected links
+
+![][d7]
+
++ Top Rated Movies - This returns a list of top rated movies using an API call and can filter based on Genre
+
+![][d8]
+
 
 
 ### Component catalogue.
@@ -95,8 +126,14 @@ platform your app uses (e.g. TMDB lists, Firestore) and itemize the data it pers
 [Briefly explain any aspects of your assignment work that required independent learning (i.e. not addressed in the lectures or labs) on your behalf., e.g. 3rd-party components, libraries, tools. Include source code references.]
 
 [cD]: ./public/codeDownload.JPG
-[d1]: ./public/discover1.png
-[d2]: ./public/discover2.png
+[d1]: ./public/similarMovies.JPG
+[d2]: ./public/tvShows.JPG
+[d3]: ./public/tvDetails.JPG
+[d4]: ./public/tvRatings.JPG
+[d5]: ./public/popularActors.JPG
+[d6]: ./public/actorDetails.JPG
+[d7]: ./public/login.JPG
+[d8]: ./public/topRated.JPG
 [detail]: ./public/detail.png
 [caching]: ./public/caching.png
 [stories]: ./public/stories.png
