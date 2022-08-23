@@ -85,14 +85,14 @@ const TvDetails = ({ tv }) => {
         className={classes.fab}
       >
         <NavigationIcon />
-        Reviews
+        TvReviews
       </Fab>
       <Drawer
         anchor="top"
         open={drawerOpen}
         onClose={() => setDrawerOpen(false)}
       >
-        <tvReviews tv={tv} />
+        <TvReviews tv={tv} />
       </Drawer>
     </>
   );
