@@ -87,6 +87,7 @@ https://github.com/Decodon/projectMovieApps3.git
 
 This was copied straight from sample 8 in the routing examples and used to only allow a logged in user to write their own review
 + /reviews/form
+![][auth]
 
 ## Independent learning (if relevant),
 Slack channel helped me render my Actors biography correctly, was showing blank pages until I saw others had similar issues
@@ -99,7 +100,7 @@ Slack channel helped me render my Actors biography correctly, was showing blank 
 [d5]: ./public/actorDetails.JPG
 [d6]: ./public/login.JPG
 [d7]: ./public/topRated.JPG
-[detail]: ./public/detail.png
+[stories]: ./public/Storybook.JPG
 [caching1]: ./public/cachingActors.JPG
 [caching2]: ./public/cachingTv.JPG
 [auth]: ./public/protectedView.JPG
