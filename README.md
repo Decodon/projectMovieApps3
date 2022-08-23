@@ -19,7 +19,7 @@ New features added onto the Movie App:
 
 To clone or download, follow the link below and press whatever option from the green dropdown:
 https://github.com/Decodon/projectMovieApps3.git
-![][codeDownload]
+![][cD]
 
 ## App Design.
 
@@ -89,6 +89,7 @@ platform your app uses (e.g. TMDB lists, Firestore) and itemize the data it pers
 
 [Briefly explain any aspects of your assignment work that required independent learning (i.e. not addressed in the lectures or labs) on your behalf., e.g. 3rd-party components, libraries, tools. Include source code references.]
 
+[cD]: ./public/codeDownload.JPG
 [d1]: ./public/discover1.png
 [d2]: ./public/discover2.png
 [detail]: ./public/detail.png
