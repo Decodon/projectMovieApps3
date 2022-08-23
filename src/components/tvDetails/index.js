@@ -72,16 +72,9 @@ const TvDetails = ({ tv }) => {
           ))}
         </Paper>
         <Paper component="ul" className={classes.chipSet}>
-          <Chip icon={<AccessTimeIcon />} label={`${tv.runtime} min.`} />
-          <Chip
-            icon={<MonetizationIcon />}
-            label={`${tv.revenue.toLocaleString()}`}
-          />
-          <Chip
-            icon={<StarRate />}
-            label={`${tv.vote_average} (${tv.vote_count}`}
-          />
-          <Chip label={`Released: ${tv.release_date}`} />
+        <Chip label={`Seasons: ${tv.number_of_seasons}`} />
+        <Chip label={`Episodes: ${tv.number_of_episodes}`} />
+        <Chip label={`1st Aired: ${tv.first_air_date}`} />
         </Paper>
       </div>
       {/* New */}
