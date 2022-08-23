@@ -21,6 +21,9 @@ import SimilarMoviesPage from "./pages/similarMoviesPage";
 import TopRatedMoviesPage from "./pages/topRatedMoviesPage";
 import ActorsPage from "./pages/actorsPage";
 import ActorDetailsPage from "./pages/actorDetailsPage";
+import AuthProvider from "./authContext";
+import ProtectedRoute from "./protectedRoute";
+import LoginPage from "./pages/loginPage";
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -36,30 +39,49 @@ const App = () => {
   return (
     <QueryClientProvider client={queryClient}>
       <BrowserRouter>
-        <MoviesContextProvider>
-          <TvsContextProvider>
-          <SiteHeader />
-          <Routes>
-            <Route path="/reviews/form" element={<AddMovieReviewPage />} />
-            <Route path="/movies/upcoming" element={<UpcomingMoviesPage />} />
-            <Route
-              path="/movies/favourites"
-              element={<FavouriteMoviesPage />}
-            />
-            <Route path="/movies/mustWatch" element={<MustWatchPage />} />
-            <Route path="/movies/topRated" element={<TopRatedMoviesPage />} />
-            <Route path="/reviews/:id" element={<MovieReviewPage />} />
-            <Route path="/movies/:id" element={<MoviePage />} />
-            <Route path="/tvs" element={<TvsPage />} />
-            <Route path="/tvs/:id" element={<TvPage />} />
-            <Route path="/movies/:id/similar" element={<SimilarMoviesPage/>} />
-            <Route path="/actors" element={<ActorsPage />} />
-            <Route path="/actors/:id" element={<ActorDetailsPage />} />
-            <Route path="/" element={<HomePage />} />
-            <Route path="*" element={<Navigate to="/" replace />} />
-          </Routes>
-          </TvsContextProvider>
-        </MoviesContextProvider>
+        <AuthProvider>
+          <MoviesContextProvider>
+            <TvsContextProvider>
+              <SiteHeader />
+              <Routes>
+                <Route path="/login" element={<LoginPage />} />
+                <Route
+                  path="/reviews/form"
+                  element={
+                    <ProtectedRoute>
+                      <AddMovieReviewPage />
+                    </ProtectedRoute>
+                  }
+                />
+                <Route
+                  path="/movies/upcoming"
+                  element={<UpcomingMoviesPage />}
+                />
+                <Route
+                  path="/movies/favourites"
+                  element={<FavouriteMoviesPage />}
+                />
+                <Route path="/movies/mustWatch" element={<MustWatchPage />} />
+                <Route
+                  path="/movies/topRated"
+                  element={<TopRatedMoviesPage />}
+                />
+                <Route path="/reviews/:id" element={<MovieReviewPage />} />
+                <Route path="/movies/:id" element={<MoviePage />} />
+                <Route path="/tvs" element={<TvsPage />} />
+                <Route path="/tvs/:id" element={<TvPage />} />
+                <Route
+                  path="/movies/:id/similar"
+                  element={<SimilarMoviesPage />}
+                />
+                <Route path="/actors" element={<ActorsPage />} />
+                <Route path="/actors/:id" element={<ActorDetailsPage />} />
+                <Route path="/" element={<HomePage />} />
+                <Route path="*" element={<Navigate to="/" replace />} />
+              </Routes>
+            </TvsContextProvider>
+          </MoviesContextProvider>
+        </AuthProvider>
       </BrowserRouter>
       <ReactQueryDevtools initialIsOpen={false} />
     </QueryClientProvider>
