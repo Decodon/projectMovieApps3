@@ -17,6 +17,7 @@ import MustWatchPage from "./pages/mustWatchPage";
 import TvsContextProvider from "./contexts/tvsContext";
 import TvsPage from "./pages/tvsPage";
 import TvPage from "./pages/tvDetailsPage";
+import SimilarMoviesPage from "./pages/similarMoviesPage";
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -47,6 +48,7 @@ const App = () => {
             <Route path="/movies/:id" element={<MoviePage />} />
             <Route path="/tvs" element={<TvsPage />} />
             <Route path="/tvs/:id" element={<TvPage />} />
+            <Route path="/movies/:id/similar" element={<SimilarMoviesPage/>} />
             <Route path="/" element={<HomePage />} />
             <Route path="*" element={<Navigate to="/" replace />} />
           </Routes>

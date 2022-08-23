@@ -11,6 +11,8 @@ import NavigationIcon from "@material-ui/icons/Navigation";
 import Fab from "@material-ui/core/Fab";
 import Drawer from "@material-ui/core/Drawer";
 import MovieReviews from "../movieReviews";
+import {BrowserRouter as Router, Link} from 'react-router-dom';
+import Button from "@material-ui/core/Button";
 
 const useStyles = makeStyles((theme) => ({
   chipRoot: {
@@ -83,6 +85,11 @@ const MovieDetails = ({ movie }) => {
           />
           <Chip label={`Released: ${movie.release_date}`} />
         </Paper>
+        <Link to={`/movies/${movie.id}/similar`}>
+          <Button variant="outlined" size="medium" color="primary">
+            Similiar Movies
+          </Button>
+        </Link>
       </div>
       {/* New */}
       <Fab
