@@ -8,6 +8,7 @@ export default {
       poster_path: "/iTQHKziZy9pAAY4hHEDCGPaOvFC.jpg",
       backdrop_path: "/d8duYyyC9J5T825Hg7grmaabfxQ.jpg",
     },
+    actor: "Declan O' Donovan", 
     budget: 200000000,
     genres: [
       {

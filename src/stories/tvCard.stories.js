@@ -1,16 +1,26 @@
 import React from "react";
 import TvCard from "../components/tvCard";
 import SampleTv from "./sampleData";
+import { MemoryRouter } from "react-router";
+import TvsContextProvider from "../contexts/tvsContext";
+import { action } from "@storybook/addon-actions";
+import AddToFavoritesIcon from "../components/cardIcons/addToFavourites";
 
 export default {
   title: "Home Page/TvCard",
   component: TvCard,
+  decorators: [
+    (Story) => <MemoryRouter initialEntries={["/"]}>{Story()}</MemoryRouter>,
+    (Story) => <TvsContextProvider>{Story()}</TvsContextProvider>,
+  ],
 };
 
 export const Basic = () => {
   return (
     <TvCard
       tv={SampleTv}
+      action={(tv) => <AddToFavoritesIcon tv={tv} />}
+      taging={(tv) => null}
     />
   );
 };
@@ -21,6 +31,8 @@ export const Exceptional = () => {
   return (
     <TvCard
       tv={sampleNoPoster}
+      action={(tv) => <AddToFavoritesIcon tv={tv} />}
+      taging={(tv) => null}
     />
   );
 };

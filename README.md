@@ -42,14 +42,6 @@ https://github.com/Decodon/projectMovieApps3.git
 
 
 ### Views/Pages.
-[d1]: ./public/similarMovies.JPG
-[d2]: ./public/tvShows.JPG
-[d3]: ./public/tvDetails.JPG
-[d4]: ./public/popularActors.JPG
-[d5]: ./public/actorDetails.JPG
-[d6]: ./public/login.JPG
-[d7]: ./public/topRated.JPG
-
 + Similar Movies - This returns a list of top rated movies using an API call based on a selected movie. They can then be added to favourites also
 
 ![][d1]
@@ -80,46 +72,24 @@ https://github.com/Decodon/projectMovieApps3.git
 
 
 
-
 ### Component catalogue.
-
-[ Use the Storybook UI to highlight the new components for which you developed stories.]
-e.g.
++ Not much added here, would have liked to added all the new components in and update the sample data for it to run properly
 
 ![][stories]
 
 ## Caching.
++ Caching was implemented for all the TV modules and Actors
 
-[ List the TMDB server state cached by the app. Include a screenshot(s) of the react-query dev tools to validate your list.]
-
-e.g.
-+ Discover movies (pagination support)
-+ Movie details
- + etc
-+ etc
-
-![][caching]
+![][caching1]
+![][caching2]
 
 ## Authentication (if relevant).
 
-[Briefly state how you implemented authentication for the app, e.g. basic, Firebase, etc. Also, list the routes that are private/protected.]
-
-e.g.
-+ /reviews/:id
-+ /movies/favourites
-
-## Server-side persistence (if relevant)
-
-[ Specify the persistence 
-platform your app uses (e.g. TMDB lists, Firestore) and itemize the data it persists.]
-
-## Additional features (if relevant),
-
-[Mention any additional user features of your app that may not be obvious from the previous sections, e.g. pagination, extended filtering/sorting, searching.]
+This was copied straight from sample 8 in the routing examples and used to only allow a logged in user to write their own review
++ /reviews/form
 
 ## Independent learning (if relevant),
-
-[Briefly explain any aspects of your assignment work that required independent learning (i.e. not addressed in the lectures or labs) on your behalf., e.g. 3rd-party components, libraries, tools. Include source code references.]
+Slack channel helped me render my Actors biography correctly, was showing blank pages until I saw others had similar issues
 
 [cD]: ./public/codeDownload.JPG
 [d1]: ./public/similarMovies.JPG
@@ -130,5 +100,6 @@ platform your app uses (e.g. TMDB lists, Firestore) and itemize the data it pers
 [d6]: ./public/login.JPG
 [d7]: ./public/topRated.JPG
 [detail]: ./public/detail.png
-[caching]: ./public/caching.png
-[stories]: ./public/stories.png
+[caching1]: ./public/cachingActors.JPG
+[caching2]: ./public/cachingTv.JPG
+[auth]: ./public/protectedView.JPG
