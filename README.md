@@ -19,7 +19,12 @@ New features added onto the Movie App:
 
 To clone or download, follow the link below and press whatever option from the green dropdown:
 https://github.com/Decodon/projectMovieApps3.git
+
 ![][cD]
+
+Use npm install to install any modules/libraries needed
+
+use nmp start to run the project
 
 ## App Design.
 
