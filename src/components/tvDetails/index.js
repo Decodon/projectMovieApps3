@@ -10,7 +10,7 @@ import { makeStyles } from "@material-ui/core/styles";
 import NavigationIcon from "@material-ui/icons/Navigation";
 import Fab from "@material-ui/core/Fab";
 import Drawer from "@material-ui/core/Drawer";
-import MovieReviews from "../movieReviews";
+import TvReviews from "../tvReviews";
 
 const useStyles = makeStyles((theme) => ({
   chipRoot: {
@@ -43,7 +43,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const MovieDetails = ({ movie }) => {
+const TvDetails = ({ tv }) => {
   const classes = useStyles();
   const [drawerOpen, setDrawerOpen] = useState(false); // New
 
@@ -54,7 +54,7 @@ const MovieDetails = ({ movie }) => {
       </Typography>
 
       <Typography variant="h6" component="p">
-        {movie.overview}
+        {tv.overview}
       </Typography>
       <div className={classes.chipRoot}>
         <Paper component="ul" className={classes.chipSet}>
@@ -65,23 +65,23 @@ const MovieDetails = ({ movie }) => {
               color="primary"
             />
           </li>
-          {movie.genres.map((g) => (
+          {tv.genres.map((g) => (
             <li key={g.name}>
               <Chip label={g.name} className={classes.chip} />
             </li>
           ))}
         </Paper>
         <Paper component="ul" className={classes.chipSet}>
-          <Chip icon={<AccessTimeIcon />} label={`${movie.runtime} min.`} />
+          <Chip icon={<AccessTimeIcon />} label={`${tv.runtime} min.`} />
           <Chip
             icon={<MonetizationIcon />}
-            label={`${movie.revenue.toLocaleString()}`}
+            label={`${tv.revenue.toLocaleString()}`}
           />
           <Chip
             icon={<StarRate />}
-            label={`${movie.vote_average} (${movie.vote_count}`}
+            label={`${tv.vote_average} (${tv.vote_count}`}
           />
-          <Chip label={`Released: ${movie.release_date}`} />
+          <Chip label={`Released: ${tv.release_date}`} />
         </Paper>
       </div>
       {/* New */}
@@ -99,10 +99,9 @@ const MovieDetails = ({ movie }) => {
         open={drawerOpen}
         onClose={() => setDrawerOpen(false)}
       >
-        <MovieReviews movie={movie} />
+        <tvReviews tv={tv} />
       </Drawer>
     </>
   );
 };
-export default MovieDetails;
-
+export default TvDetails;
