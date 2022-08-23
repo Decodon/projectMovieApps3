@@ -9,6 +9,7 @@ import Button from "@material-ui/core/Button";
 import Typography from "@material-ui/core/Typography";
 import FavoriteIcon from "@material-ui/icons/Favorite";
 import CalendarIcon from "@material-ui/icons/CalendarTodayTwoTone";
+import LanguageIcon from '@material-ui/icons/Language';
 import StarRateIcon from "@material-ui/icons/StarRate";
 import Grid from "@material-ui/core/Grid";
 import { Link } from "react-router-dom";
@@ -63,8 +64,8 @@ export default function TvCard({ tv, action }) {
         <Grid container>
           <Grid item xs={6}>
             <Typography variant="h6" component="p">
-              <CalendarIcon fontSize="small" />
-              {tv.release_date}
+              <LanguageIcon fontSize="small" />
+              {tv.origin_country}
             </Typography>
           </Grid>
           <Grid item xs={6}>

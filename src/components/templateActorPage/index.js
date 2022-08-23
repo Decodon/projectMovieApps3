@@ -38,7 +38,7 @@ const TemplateActorPage = ({ actor, children }) => {
     if (isError) {
       return <h1>{error.message}</h1>;
     }
-    const images = data.posters 
+    const images = data.profiles
 
   return (
     <>
@@ -53,7 +53,7 @@ const TemplateActorPage = ({ actor, children }) => {
                   <ImageListItem key={image.file_path} cols={1}>
                     <img
                       src={`https://image.tmdb.org/t/p/w500/${image.file_path}`}
-                      alt={image.poster_path}
+                      alt={image.file_path}
                     />
                   </ImageListItem>
                 ))}
